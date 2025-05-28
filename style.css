@@ -4,7 +4,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(180deg, #ffd6df 0%, #ffbfcf 100%);
+  background: #111;
   font-family: 'Oswald', Arial, sans-serif;
   overflow-x: hidden;
   position: relative;
@@ -41,9 +41,20 @@ body {
   left: 0;
   bottom: 0;
   border-radius: 120px 120px 0 0 / 180px 180px 0 0;
-  background: #fff;
+  background: #ff3b3b;
   opacity: 1;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloud-text {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
 }
 
 /* Подарки снизу */
@@ -147,11 +158,11 @@ h1 {
   font-size: 1.1em;
   letter-spacing: 1px;
 }
-.link-button.highlight {
-  box-shadow: 0 0 0 4px #fff, 0 4px 16px #ffbfcf;
-  background: #ff8b8b;
+.link-button.first-highlight {
+  background: #d80000;
+  box-shadow: 0 0 0 6px #fff, 0 4px 24px #d80000;
   border-color: #fff;
-  z-index: 20;
+  z-index: 30;
 }
 .link-button:hover {
   background: #e05252;
@@ -173,5 +184,6 @@ h1 {
   .bg-gift-img { width: 90px; height: 90px; }
   .bg-gift { opacity: 0.1; }
   .cloud--bottom { height: 90px; border-radius: 60px 60px 0 0 / 90px 90px 0 0; }
+  .cloud-text { font-size: 1rem; }
   .gift-img { width: 40px; height: 40px; }
 }
