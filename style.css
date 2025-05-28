@@ -3,143 +3,152 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'Oswald', sans-serif;
-  background: #FFD1DC;
-  overflow: hidden;
-  position: relative;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(180deg, #ffd6df 0%, #ffbfcf 100%);
+  font-family: 'Oswald', Arial, sans-serif;
+  overflow-x: hidden;
+  position: relative;
 }
 
-/* ПАРАЛЛАКС-ОБЛАКА */
+/* Облака */
 .cloud {
   position: absolute;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60"><path d="M100,30a20,20 0 1,0-40,0 18,18 0 0,0-36,0c0,2 .2,4 .6,6h70a16,16 0 0,0 4-6z" fill="%23FFF" opacity="0.7"/></svg>') no-repeat center/contain;
-  opacity: 0.6;
+  background: #fff;
+  opacity: 0.8;
+  border-radius: 50%;
+  z-index: 1;
+}
+.cloud--1 { width: 180px; height: 60px; top: 40px; left: 10vw; animation: cloud-move 60s linear infinite; }
+.cloud--2 { width: 120px; height: 40px; top: 100px; right: 12vw; animation: cloud-move 80s linear infinite reverse; }
+.cloud--3 { width: 90px; height: 30px; top: 180px; left: 60vw; animation: cloud-move 70s linear infinite; }
+.cloud--4 { width: 60px; height: 20px; top: 60px; right: 30vw; animation: cloud-move 90s linear infinite reverse; }
+.cloud--5 { width: 60px; height: 20px; top: 220px; left: 80vw; animation: cloud-move 100s linear infinite; }
+.cloud--bottom {
+  width: 100vw; height: 180px;
+  left: 0; bottom: 0;
+  border-radius: 120px 120px 0 0 / 180px 180px 0 0;
+  background: #fff;
+  opacity: 1;
+  z-index: 2;
+}
+@keyframes cloud-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100vw); }
 }
 
-.cloud--small {
-  width: 100px; height: 50px;
-  top: 10%; left: 15%;
-  animation: drift 40s linear infinite alternate;
-}
-.cloud--medium {
-  width: 200px; height: 100px;
-  top: 30%; right: 10%;
-  animation: drift 60s linear infinite alternate-reverse;
-}
-.cloud--large {
-  width: 300px; height: 150px;
-  bottom: 20%; left: 20%;
-  animation: drift 80s linear infinite alternate;
-}
-.cloud--xlarge {
-  width: 400px; height: 200px;
-  bottom: 0; right: 0;
-  animation: drift 100s linear infinite alternate-reverse;
-}
-
-@keyframes drift {
-  from { transform: translateX(-50px); }
-  to   { transform: translateX(50px);  }
-}
-
-/* СЕРДЕЧКИ ВЕЗДЕ */
-.heart {
+/* Подарки на шариках */
+.gift-balloon {
   position: absolute;
-  width: 20px; height: 18px;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M4,12 a8,8 0 0,1 16,0 8,8 0 0,1 16,0 L16,30 Z" fill="%23FF6B6B"/></svg>') no-repeat center/contain;
-  animation: floatUp 6s infinite ease-in;
-  left: calc(20% + 60vw * var(--i));
-  bottom: -10%;
+  z-index: 3;
+  animation: gift-float 6s ease-in-out infinite alternate;
 }
-.heart:nth-child(1) { --i: 0.1; animation-delay: 0s; }
-.heart:nth-child(2) { --i: 0.3; animation-delay: 1s; }
-.heart:nth-child(3) { --i: 0.5; animation-delay: 2s; }
-.heart:nth-child(4) { --i: 0.7; animation-delay: 3s; }
-.heart:nth-child(5) { --i: 0.9; animation-delay: 4s; }
-
-@keyframes floatUp {
-  0%   { transform: translateY(0) scale(1); opacity: 0.8; }
-  50%  { opacity: 1; }
-  100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+.gift-balloon--left { left: 5vw; bottom: 120px; animation-delay: 0s; }
+.gift-balloon--right { right: 5vw; bottom: 100px; animation-delay: 2s; }
+@keyframes gift-float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
 }
 
-/* КОНТЕЙНЕР */
 .container {
   position: relative;
-  z-index: 1;
+  z-index: 10;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 32px 8px 0 8px;
   text-align: center;
-  padding: 20px;
-  max-width: 400px; width: 90%;
 }
-
-/* ШАПКА */
+.logo-wrap {
+  margin: 0 auto 12px auto;
+  width: 120px; height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: flex; align-items: center; justify-content: center;
+}
 .logo {
-  width: 120px; height: auto;
-  border: 3px solid #fff; border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-bottom: 10px;
+  width: 104px; height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffbfcf;
 }
 h1 {
-  font-size: 2.5rem; color: #3a2e2e;
-  margin-bottom: 5px; text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #2d1818;
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
 }
-p { font-size: 0.9rem; color: #5c4b4b; margin-bottom: 15px; text-transform: uppercase; }
-.arrow { font-size: 1.5rem; color: #e91e63; margin-bottom: 20px; }
+.subtitle {
+  font-size: 1.1rem;
+  color: #6d3a3a;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+.arrow-down {
+  font-size: 2rem;
+  color: #e05252;
+  margin-bottom: 1.2em;
+}
 
-/* КНОПКИ */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 10px;
+}
 .link-button {
   display: flex;
   align-items: center;
-  position: relative;
-  background: #FF6B6B;
+  background: #ff6b6b;
   color: #fff;
+  border-radius: 32px;
+  box-shadow: 0 4px 12px rgba(255,107,107,0.10);
+  padding: 18px 18px;
+  font-size: 1.15rem;
+  font-weight: 700;
   text-decoration: none;
-  border-radius: 30px;
-  padding: 15px 20px;
-  margin: 10px 0;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
+  transition: box-shadow 0.2s, background 0.2s;
+  position: relative;
+  border: 3px solid #ffbfcf;
+  min-height: 56px;
 }
 .link-button .btn-icon {
+  margin-right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 36px; height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 15px;
-  flex-shrink: 0;
 }
 .link-button .btn-text {
-  flex-grow: 1;
+  flex: 1;
   text-align: center;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.1em;
+  letter-spacing: 1px;
 }
-
-/* БЛИК ТОЛЬКО НА ПЕРВОЙ */
-.link-button.primary .shine {
-  content: "";
-  position: absolute;
-  top: 0; left: -40%;
-  width: 40%; height: 100%;
-  background: rgba(255,255,255,0.3);
-  transform: skewX(-20deg);
-  animation: shine 2.5s infinite;
+.link-button.highlight {
+  box-shadow: 0 0 0 4px #fff, 0 4px 16px #ffbfcf;
+  background: #ff8b8b;
+  border-color: #fff;
+  z-index: 20;
 }
-@keyframes shine {
-  0%   { left: -40%; }
-  100% { left: 140%; }
-}
-
-/* ХОВЕР */
 .link-button:hover {
   background: #e05252;
 }
 
-/* ФУТЕР */
-footer {
-  margin-top: 25px;
-  font-size: 0.8rem; color: #777;
+@media (max-width: 600px) {
+  .container {
+    max-width: 98vw;
+    padding: 18px 2vw 0 2vw;
+  }
+  .logo-wrap { width: 90px; height: 90px; }
+  .logo { width: 76px; height: 76px; }
+  h1 { font-size: 1.4rem; }
+  .subtitle { font-size: 0.95rem; }
+  .arrow-down { font-size: 1.3rem; }
+  .link-button { font-size: 1rem; padding: 13px 10px; min-height: 44px; }
+  .link-button .btn-icon { width: 28px; height: 28px; margin-right: 10px; }
+  .links { gap: 12px; }
+  .cloud--1, .cloud--2, .cloud--3, .cloud--4, .cloud--5 { opacity: 0.7; }
+  .cloud--bottom { height: 90px; border-radius: 60px 60px 0 0 / 90px 90px 0 0; }
+  .gift-balloon svg { width: 40px; height: 70px; }
 }
