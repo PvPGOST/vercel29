@@ -17,8 +17,8 @@ body {
   opacity: 0.15;
 }
 .bg-gift-img {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
 }
 .bg-gift--1 { top: 15%; left: 10%; animation: gift-random 15s ease-in-out infinite; }
 .bg-gift--2 { top: 45%; right: 15%; animation: gift-random 18s ease-in-out infinite 2s; }
@@ -86,10 +86,11 @@ body {
   overflow: hidden;
 }
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border: 3px solid #ffbfcf;
+  border-radius: 50%;
 }
 h1 {
   font-size: 2.2rem;
@@ -162,14 +163,14 @@ h1 {
     padding: 18px 2vw 0 2vw;
   }
   .logo-wrap { width: 90px; height: 90px; }
-  .logo { width: 90px; height: 90px; }
+  .logo { width: 100%; height: 100%; }
   h1 { font-size: 1.4rem; }
   .subtitle { font-size: 0.95rem; }
   .arrow-down { font-size: 1.3rem; }
   .link-button { font-size: 1rem; padding: 13px 10px; min-height: 44px; }
   .link-button .btn-icon { width: 28px; height: 28px; margin-right: 10px; }
   .links { gap: 12px; }
-  .bg-gift-img { width: 60px; height: 60px; }
+  .bg-gift-img { width: 90px; height: 90px; }
   .bg-gift { opacity: 0.1; }
   .cloud--bottom { height: 90px; border-radius: 60px 60px 0 0 / 90px 90px 0 0; }
   .gift-img { width: 40px; height: 40px; }
