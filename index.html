@@ -3,63 +3,65 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Multi-Link | %%TITLE%%</title>
+  <title>Multi-Link | ГЛАЗ ИИСУСА</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Облака (фон) -->
-  <div class="cloud cloud--1"></div>
-  <div class="cloud cloud--2"></div>
-  <div class="cloud cloud--3"></div>
-  <div class="cloud cloud--4"></div>
-  <div class="cloud cloud--5"></div>
+  <!-- Фоновые подарки -->
+  <div class="bg-gift bg-gift--1">
+    <img src="images/logoglaz.png" alt="Gift" class="bg-gift-img">
+  </div>
+  <div class="bg-gift bg-gift--2">
+    <img src="images/logoglaz.png" alt="Gift" class="bg-gift-img">
+  </div>
+  <div class="bg-gift bg-gift--3">
+    <img src="images/logoglaz.png" alt="Gift" class="bg-gift-img">
+  </div>
+  <div class="bg-gift bg-gift--4">
+    <img src="images/logoglaz.png" alt="Gift" class="bg-gift-img">
+  </div>
+  <div class="bg-gift bg-gift--5">
+    <img src="images/logoglaz.png" alt="Gift" class="bg-gift-img">
+  </div>
+  <div class="bg-gift bg-gift--6">
+    <img src="images/logoglaz.png" alt="Gift" class="bg-gift-img">
+  </div>
   <div class="cloud cloud--bottom"></div>
 
-  <!-- Подарки на шариках -->
-  <div class="gift-balloon gift-balloon--left">
-    <!-- SVG оставлен без изменений -->
+  <!-- Подарки снизу -->
+  <div class="gift gift--left">
+    <img src="images/logoglaz.png" alt="Gift" class="gift-img">
   </div>
-  <div class="gift-balloon gift-balloon--right">
-    <!-- SVG оставлен без изменений -->
+  <div class="gift gift--right">
+    <img src="images/logoglaz.png" alt="Gift" class="gift-img">
   </div>
 
   <div class="container">
     <header>
       <div class="logo-wrap">
-        <img src="%%LOGO1%%" class="logo" alt="Логотип"/>
+        <img src="images/logo.jpg" class="logo" alt="Логотип"/>
       </div>
-      <h1>%%TITLE%%</h1>
+      <h1>ГЛАЗ ИИСУСА</h1>
       <p class="subtitle">ВСЕГДА АКТУАЛЬНЫЕ ССЫЛКИ</p>
       <div class="arrow-down">&#8595;</div>
     </header>
 
     <div class="links">
-      <a href="%%LINK1%%" class="link-button" id="btn-main" target="_blank">
+      <a href="#" class="link-button" id="btn-main" target="_blank">
         <span class="btn-icon">
-          <svg width="28" height="28" viewBox="0 0 28 28">
-            <circle cx="14" cy="14" r="14" fill="#fff"/>
-            <polygon points="10,8 20,14 10,20" fill="#FF6B6B"/>
-          </svg>
+          <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#fff"/><polygon points="10,8 20,14 10,20" fill="#FF6B6B"/></svg>
         </span>
         <span class="btn-text">ГЛАВНЫЙ БОТ</span>
       </a>
-      <a href="%%LINK2%%" class="link-button" id="btn-reserve" target="_blank">
+      <a href="#" class="link-button" id="btn-reserve" target="_blank">
         <span class="btn-icon">
-          <svg width="28" height="28" viewBox="0 0 28 28">
-            <circle cx="14" cy="14" r="14" fill="#fff"/>
-            <polygon points="10,8 20,14 10,20" fill="#FF6B6B"/>
-            <rect x="6" y="12" width="4" height="4" fill="#FF6B6B"/>
-          </svg>
+          <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#fff"/><polygon points="10,8 20,14 10,20" fill="#FF6B6B"/><rect x="6" y="12" width="4" height="4" fill="#FF6B6B"/></svg>
         </span>
         <span class="btn-text">РЕЗЕРВНЫЙ БОТ</span>
       </a>
-      <a href="%%LINK3%%" class="link-button" id="btn-channel" target="_blank">
+      <a href="#" class="link-button" id="btn-channel" target="_blank">
         <span class="btn-icon">
-          <svg width="28" height="28" viewBox="0 0 28 28">
-            <circle cx="14" cy="14" r="14" fill="#fff"/>
-            <path d="M8 20 Q14 10 20 20" stroke="#FF6B6B" stroke-width="2" fill="none"/>
-            <circle cx="14" cy="16" r="2" fill="#FF6B6B"/>
-          </svg>
+          <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#fff"/><path d="M8 20 Q14 10 20 20" stroke="#FF6B6B" stroke-width="2" fill="none"/><circle cx="14" cy="16" r="2" fill="#FF6B6B"/></svg>
         </span>
         <span class="btn-text">КАНАЛ</span>
       </a>
@@ -67,7 +69,6 @@
   </div>
 
   <script>
-    // Подсветка кнопок по очереди
     const btns = [
       document.getElementById('btn-main'),
       document.getElementById('btn-reserve'),
