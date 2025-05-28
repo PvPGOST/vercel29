@@ -4,7 +4,7 @@
 
 body {
   min-height: 100vh;
-  background: #111;
+  background: #18181b;
   font-family: 'Oswald', Arial, sans-serif;
   overflow-x: hidden;
   position: relative;
@@ -41,7 +41,7 @@ body {
   left: 0;
   bottom: 0;
   border-radius: 120px 120px 0 0 / 180px 180px 0 0;
-  background: #ff3b3b;
+  background: #fff;
   opacity: 1;
   z-index: 2;
   display: flex;
@@ -50,7 +50,7 @@ body {
 }
 
 .cloud-text {
-  color: #fff;
+  color: #e50914;
   font-size: 1.25rem;
   font-weight: 700;
   text-align: center;
@@ -106,13 +106,13 @@ body {
 h1 {
   font-size: 2.2rem;
   font-weight: 900;
-  color: #2d1818;
+  color: #fff;
   margin-bottom: 0.2em;
   text-transform: uppercase;
 }
 .subtitle {
   font-size: 1.1rem;
-  color: #6d3a3a;
+  color: #ff5c5c;
   margin-bottom: 0.5em;
   letter-spacing: 1px;
 }
@@ -131,18 +131,18 @@ h1 {
 .link-button {
   display: flex;
   align-items: center;
-  background: #ff6b6b;
+  background: #ff5c5c;
   color: #fff;
   border-radius: 32px;
-  box-shadow: 0 4px 12px rgba(255,107,107,0.10);
-  padding: 18px 18px;
+  box-shadow: 0 4px 16px rgba(229,9,20,0.10);
+  padding: 20px 18px;
   font-size: 1.15rem;
   font-weight: 700;
   text-decoration: none;
   transition: box-shadow 0.2s, background 0.2s;
   position: relative;
-  border: 3px solid #ffbfcf;
-  min-height: 56px;
+  border: 3px solid #fff;
+  min-height: 64px;
 }
 .link-button .btn-icon {
   margin-right: 18px;
@@ -159,13 +159,14 @@ h1 {
   letter-spacing: 1px;
 }
 .link-button.first-highlight {
-  background: #d80000;
-  box-shadow: 0 0 0 6px #fff, 0 4px 24px #d80000;
+  background: #e50914;
+  box-shadow: 0 0 0 6px #fff, 0 4px 24px #e50914;
   border-color: #fff;
   z-index: 30;
 }
 .link-button:hover {
-  background: #e05252;
+  background: #b0060f;
+  color: #fff;
 }
 
 @media (max-width: 600px) {
